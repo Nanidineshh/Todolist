@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+body{
+    height: 100vh;
+    background-image:url("img.jpg");
+    background-size: cover;
+    color: white;
+    font-size: larger;
+}
+.title{
+  position: relative;
+  font-size: 4em;
+  padding: 5px;
+  background-color: navy;
+  padding-left: 30px;
+}
+.app{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width:min(95vw,31.25em);
+  position: absolute;
+  margin: auto;
+  left: 60vh;
+  right: 0;
+  top: 1.875em;
+  
+}
+#wrapper{
+   padding: 10px;
+   position: relative;
+   display: grid;
+   grid-template-columns: 8fr 4fr;
+   gap: 1em;
+}
+#wrapper input{
+  width: 100%;
+  color: #111111;
+  background-color: transparent;
+  font-size: 0.8em;
+  border:0.1em solid navy;
+  border-radius: 0.5em;
+  height: 40px;
+}
+#wrapper button{
+  position: relative;
+  border-radius: 0.5em;
+  color: white;
+  background-color: transparent;
+  font-size: 0.9em;
+  border:0.1em solid navy;
+  cursor: pointer;
+  background-color: navy;
+}
+#tasks{
+  background-color: navy;
+  color: white;
+  width: 100%;
+  position: relative;
+  padding: 1em 0.5em ;
+}
+.task{
+  background-color: #ffffff;
+  padding: 0.8em 1em;
+  display: grid;
+  color: black;
+  grid-template-columns: 1fr 8fr 2fr 2fr;
+  gap: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 0.5em 1em rgba(0,0,0,0.05);
+  align-items: center;
+  cursor: pointer;
+}
+.task:not(:first-child){
+  margin-top: 1em;
+}
+.task input[type="checkbox"]{
+  position: relative;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid gainsboro;
+}
+.task input[type="checkbox"]:before{
+  content:"";
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:50%;
+}
+.task input[type="checkbox"]:checked{
+  background-color: navy;
+}
+.task input[type="checkbox"]:checked:before{
+  position: absolute;
+  content: "\f00c";
+  color:black;
+  font-weight: 900;
+}
+.task span{
+  font:0.9em;
+  font-weight:400;
+  word-break: break-all;
+}
+.task button{
+ color: navy;
+  width: 100%;
+  padding: 1em 0;
+  border-radius:0.5em ;
+  border: 0.1em solid navy;
+  cursor: pointer;
+  outline: none;
+}
+
+.del{
+  background-color: red;
+}
+#pending-tasks span{
+  color:yellow;
+}
+.completed{
+  text-decoration: line-through;
+  color: gray;
+}
+#error{
+  text-align: center;
+   padding-top: 10px;
+   color: red;
+   display: none;  
+
+}
+.container{
+  padding: 2em 2.5em;
+  background-color: #f1f8fb;
+  box-shadow: 0 1em 2em rgba(0,0,0,0.3);
+  border-radius: 0.8em;
+}
